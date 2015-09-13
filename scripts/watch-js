@@ -1,0 +1,21 @@
+#!/bin/bash
+./node_modules/.bin/watchify -dv \
+    -t coffeeify \
+    -t babelify \
+    --extension=".coffee" \
+    --extension=".jsx" \
+    --extension=".js" \
+    -e client/src/initialize.js \
+    -o 'client/public/scripts/bundle.js' \
+    -x underscore \
+    -x react/addons \
+    -x superagent \
+    -x node-polyglot \
+    -x async \
+    -x moment \
+    -x classnames \
+    -x react-router \
+    -x react-redux \
+    -x redux \
+    -x immutable \
+    -x reselect

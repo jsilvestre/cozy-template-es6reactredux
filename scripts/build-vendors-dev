@@ -1,0 +1,16 @@
+#!/bin/bash
+node_modules/.bin/browserify --debug \
+    -r underscore \
+    -r react/addons \
+    -r superagent \
+    -r node-polyglot \
+    -r async \
+    -r moment \
+    -r classnames \
+    -r react-router \
+    -r react-redux \
+    -r redux \
+    -r immutable \
+    -r reselect \
+    | node_modules/.bin/exorcist client/public/scripts/bundle-vendors.js.map \
+    > client/public/scripts/bundle-vendors.js
