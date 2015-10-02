@@ -1,8 +1,7 @@
 #!/bin/bash
 ./node_modules/.bin/watchify -dv \
-    -t coffeeify \
+    -t [ envify --NODE_ENV development ] \
     -t babelify \
-    --extension=".coffee" \
     --extension=".jsx" \
     --extension=".js" \
     -e client/src/initialize.js \
@@ -11,7 +10,6 @@
     -x react/addons \
     -x superagent \
     -x node-polyglot \
-    -x async \
     -x moment \
     -x classnames \
     -x react-router \
