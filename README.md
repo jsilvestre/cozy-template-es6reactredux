@@ -1,30 +1,35 @@
 # Description
 
 Cozy Template is a template project to start quickly your own application. Just
-fork it and code while focusing only on your features !
+fork it and code while focusing only on your features!
 
-Do you feel lost? No problem, check out our tutorial to get your started: http://cozy.io/hack/getting-started/
+It uses ES6, React and Redux. The tooling is based on NPM, a few bash scripts, and Browserify. Oh, and it uses my favorite ESLint configuration.
+Don't worry, all the dependencies you need will be installed locally.
 
 # Run
+To initialize your project, run the following commands:
 
-Clone this repository, install dependencies and run server (it requires Node.js
-and Coffee-script)
+    # Get the project.
+    git clone git://github.com/jsilvestre/cozy-template-es6reactredux.git myproject
+    cd myproject
 
-    npm install -g coffee-script
-    git clone git://github.com/mycozycloud/cozy-template-coffee.git
-    cd cozy-template-coffee
+    # Reset git history.
+    rm -rf .git
+    git init
+    git add --all .
+    git commit -m "Initial commit."
+
+    # Install all required dependencies.
     npm install
-    coffee server.coffee
 
-If you want to build the application, be sure client side dependencies are installed
+When you want to dev on your project, all you need is:
 
-    cd client && npm install && cd ..
+    # Watch the source, and rebuild them on the fly. Start the server with nodemon (restart on change).
+    npm run dev
 
-And then, whenever you want to build your application:
+If you want to build your application (it will package all the code into a single `build` folder):
 
-    cake build
-
-Check the `Cakefile` for more information.
+    npm run build
 
 # What is Cozy?
 
@@ -37,11 +42,11 @@ with a new experience. You can install Cozy on your own hardware where no one
 profiles you. You install only the applications you want. You can build your
 own one too.
 
-## Community 
+## Community
 
-You can reach the Cozy community via various support:
+You can reach the Cozy community via various channels:
 
 * IRC #cozycloud on irc.freenode.net
-* Post on our [Forum](https://groups.google.com/forum/?fromgroups#!forum/cozy-cloud)
-* Post issues on the [Github repos](https://github.com/mycozycloud/)
-* Via [Twitter](http://twitter.com/mycozycloud)
+* Post on our [Forum](https://forum.cozy.io/)
+* Post issues on the [Github repos](https://github.com/cozy/)
+* [Twitter](http://twitter.com/mycozycloud)
