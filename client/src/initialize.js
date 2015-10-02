@@ -4,7 +4,7 @@ window.onload = () => {
 
     const localesLoader = {
         en: require('./locales/en'),
-        fr: require('./locales/fr')
+        fr: require('./locales/fr'),
     };
 
     let locales = localesLoader[locale];
